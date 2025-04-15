@@ -1,0 +1,36 @@
+<!-- redirect.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hold On...</title>
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetURL = decodeURIComponent(urlParams.get("to"));
+      const adLink = "https://www.profitableratecpm.com/ms78rn66hg?key=a05f270109f48d24464502975d08c342";
+
+      // Open Adsterra link in new tab
+      window.open(adLink, "_blank");
+
+      let seconds = 30;
+      const timer = document.getElementById("timer");
+
+      const countdown = setInterval(() => {
+        timer.textContent = seconds;
+        seconds--;
+
+        if (seconds < 0) {
+          clearInterval(countdown);
+          window.location.href = targetURL;
+        }
+      }, 1000);
+    };
+  </script>
+</head>
+<body style="text-align:center; font-family:sans-serif; padding-top:100px; background-color:#fff8e1;">
+  <h1>🔒 Unlocking Content...</h1>
+  <p>Please wait <strong><span id="timer">30</span></strong> seconds while we verify your request.</p>
+  <p><em>Keep the ad page open in the background!</em></p>
+</body>
+</html>
